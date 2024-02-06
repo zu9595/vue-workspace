@@ -35,7 +35,7 @@
                 </tr>
                 <tr>
                     <th class="text-right table-primary">가입날짜</th>
-                    <td class="text-center"><input class="form-control" type="date" v-model="userInfo.join_date"></td>
+                    <td class="text-center"><input class="form-control" type="text" v-model="userInfo.join_date" readonly></td>
                     <!-- yyyy-MM-dd -->
                 </tr>
             </table>
@@ -108,7 +108,7 @@ export default {
         },
         getSendData() {
             let obj = this.userInfo;
-            let delData = ["user_id", "user_no"];
+            let delData = ["user_id", "user_no", "join_date"];
             let newObj = {};
 
             let isTargeted = null;
